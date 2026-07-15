@@ -1,0 +1,33 @@
+name: track_team
+description: "Locate and navigate to the closest active field teams from campaign device-trace exports."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  archive: ^4.0.9
+  file_picker: ^11.0.2
+  flutter:
+    sdk: flutter
+  flutter_map: ^8.3.1
+  geolocator: ^14.0.2
+  go_router: ^17.0.0
+  intl: ^0.20.2
+  latlong2: ^0.10.1
+  path: ^1.9.1
+  path_provider: ^2.1.5
+  provider: ^6.1.5+1
+  sqflite: ^2.4.2
+  url_launcher: ^6.3.2
+  xml: ^6.6.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  sqflite_common_ffi: ^2.3.6
+
+flutter:
+  uses-material-design: true
