@@ -1,0 +1,160 @@
+site_name: openIMIS Developer Academy
+site_description: >-
+  An in-depth architectural handbook and interactive course for the openIMIS
+  open-source health financing platform — for experienced Django engineers.
+site_author: openIMIS Developer Academy
+site_url: https://example.org/openimis-academy/
+copyright: >-
+  Community handbook — openIMIS is a Digital Public Good. Trademarks and code
+  belong to their respective owners.
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - navigation.tracking
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - content.tooltips
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: deep orange
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+    logo: material/hospital-box-outline
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+extra_css:
+  - assets/css/extra.css
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.tilde
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - search
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/openimis
+    - icon: fontawesome/solid/globe
+      link: https://openimis.org
+  generator: false
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - getting-started/index.md
+      - Platform Overview: getting-started/overview.md
+      - Terminology & Glossary Primer: getting-started/terminology.md
+      - Set Up a Dev Environment: getting-started/setup.md
+  - Architecture:
+      - architecture/overview.md
+      - Backend Deep Dive: architecture/backend.md
+      - Plugin / Module System: architecture/plugin-system.md
+      - Request Lifecycle: architecture/request-lifecycle.md
+      - Repository Map: architecture/repository-map.md
+      - Frontend Architecture: architecture/frontend.md
+  - GraphQL:
+      - graphql/index.md
+  - Modules:
+      - modules/index.md
+      - Core: modules/core.md
+      - Insuree: modules/insuree.md
+      - Individual & Social Protection: modules/individual.md
+      - Policy: modules/policy.md
+      - Claim: modules/claim.md
+      - Location & Health Facility: modules/location.md
+      - Medical & Product: modules/medical.md
+      - Contribution & Payment: modules/payment.md
+      - Calculation Rules: modules/calculation.md
+      - FHIR R4 API: modules/fhir.md
+  - Database:
+      - database/index.md
+  - Security:
+      - security/index.md
+  - Docker & Deployment:
+      - docker/index.md
+      - Deployment & Operations: docker/deployment.md
+  - Configuration:
+      - configuration/index.md
+  - Integrations:
+      - integrations/index.md
+  - Extending openIMIS:
+      - extending/index.md
+      - End-to-End Code Walkthrough: extending/code-walkthrough.md
+  - Developer Workflow:
+      - workflow/index.md
+  - Developer Academy:
+      - academy/index.md
+      - "Level 1 — Foundations": academy/level-1.md
+      - "Level 2 — Running Locally": academy/level-2.md
+      - "Level 3 — Backend Basics": academy/level-3.md
+      - "Level 4 — Advanced Modules": academy/level-4.md
+      - "Level 5 — Frontend": academy/level-5.md
+      - "Level 6 — Ops & Scaling": academy/level-6.md
+      - "Level 7 — Expert": academy/level-7.md
+  - Architecture Critique:
+      - critique/index.md
+  - Best Practices:
+      - best-practices/index.md
+  - Reference:
+      - reference/glossary.md
+      - Troubleshooting: reference/troubleshooting.md
+      - Repository Appendix: reference/appendix.md
