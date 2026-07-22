@@ -1,0 +1,83 @@
+/* openIMIS Developer Academy — custom theme touches */
+
+:root {
+  --oi-teal: #009688;
+  --oi-amber: #ffb300;
+}
+
+/* Hero on the landing page */
+.oi-hero {
+  border-radius: 12px;
+  padding: 2.4rem 2rem;
+  margin: 0 0 1.5rem 0;
+  background: linear-gradient(135deg, #00695c 0%, #009688 55%, #26a69a 100%);
+  color: #fff;
+}
+.oi-hero h1 {
+  color: #fff;
+  margin: 0 0 .4rem 0;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+.oi-hero p {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 1.05rem;
+  max-width: 46rem;
+}
+[data-md-color-scheme="slate"] .oi-hero {
+  background: linear-gradient(135deg, #004d40 0%, #00796b 55%, #00897b 100%);
+}
+
+/* Course "card grid" using attr_list on a div */
+.oi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 1rem;
+  margin: 1.2rem 0;
+}
+.oi-card {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 10px;
+  padding: 1rem 1.1rem;
+  transition: border-color .15s ease, transform .15s ease;
+  background: var(--md-default-bg-color);
+}
+.oi-card:hover {
+  border-color: var(--oi-teal);
+  transform: translateY(-2px);
+}
+.oi-card h3 {
+  margin: 0 0 .35rem 0;
+  font-size: 1rem;
+}
+.oi-card p {
+  margin: 0;
+  font-size: .82rem;
+  color: var(--md-default-fg-color--light);
+}
+
+/* Level badges for the academy */
+.oi-badge {
+  display: inline-block;
+  padding: 0.12rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: #fff;
+  background: var(--oi-teal);
+  vertical-align: middle;
+}
+.oi-badge--advanced { background: #ef6c00; }
+.oi-badge--expert   { background: #b71c1c; }
+
+/* Make Mermaid diagrams breathe */
+.mermaid {
+  margin: 1.2rem 0;
+  text-align: center;
+}
+
+/* Slightly denser tables */
+.md-typeset table:not([class]) th {
+  background: var(--md-default-fg-color--lightest);
+}
