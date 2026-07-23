@@ -178,7 +178,7 @@ sequenceDiagram
     Svc->>New: INSERT copy with the edits
     Note over New: validity_from = now, validity_to = NULL
     Svc->>New: legacy_id = Old.id  (link to prior version)
-    Note over Old,New: Same UUID carried forward;<br/>new integer PK for the new physical row
+    Note over Old,New: Same UUID carried forward,<br/>new integer PK for the new physical row
 ```
 
 Step by step:

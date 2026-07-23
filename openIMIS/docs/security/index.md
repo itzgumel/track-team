@@ -241,7 +241,7 @@ sequenceDiagram
     DB-->>DJ: user valid
     DJ->>DJ: sign JWT (claims + expiry)
     DJ-->>B: 200 + Set-Cookie: JWT=... (HttpOnly, Secure, SameSite)
-    Note over B: Cookie stored by browser;<br/>JS cannot read it
+    Note over B: Cookie stored by browser,<br/>JS cannot read it
     B->>GW: POST /graphql {query} (cookie sent automatically)
     GW->>DJ: forward request + cookie
     DJ->>JWT: decode + verify signature, check expiry
